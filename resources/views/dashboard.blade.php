@@ -1,1 +1,1 @@
-Dashboard gan
+Dashboard gan <a href="/logout">Logout</a>

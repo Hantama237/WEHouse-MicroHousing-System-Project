@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <!-- TITLE -->
-    <title>Mytrip @yield('title')</title>
+    <title>WeHouse @yield('title')</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
@@ -110,7 +110,7 @@
                     <nav class="navigation awe-navigation" data-responsive="1200">
                         <ul class="menu-list">
                             <!-- start menu -->
-                            <li class="menu-item-has-children">
+                            {{-- <li class="menu-item-has-children">
                                 @if (Session::has('login'))
                                 <a href="#">
 
@@ -140,7 +140,7 @@
                                     </li>
                                 </ul>
                                 @endif
-                            </li>
+                            </li> --}}
 
                         </ul>
                     </nav>
@@ -182,11 +182,11 @@
         <script type="text/javascript" src="{{asset('gofar/js/lib/jquery.magnific-popup.min.js')}}"></script>
         <script type='text/javascript' src="{{asset('gofar/js/lib/jquery-ui.js')}}"></script>
         <script type="text/javascript" src="{{asset('gofar/js/scripts.js')}}"></script>
-        <script type="text/javascript" src="{{asset('base64/jquery.base64.min.js')}}"></script>
+        {{-- <script type="text/javascript" src="{{asset('base64/jquery.base64.min.js')}}"></script> --}}
         {{-- Axios --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
         <!-- HERO SECTION -->
-        @yield('konten')
+        @yield('content')
 
         <!-- FOOTER PAGE -->
         <footer id="footer-page">

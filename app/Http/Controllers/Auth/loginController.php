@@ -5,11 +5,12 @@ use App\Http\Controllers\Controller;
 use DB;
 use Hash;
 
-use App\Functions\checkFunction;
+use App\Functions\checkerFunction;
 
 class loginController extends Controller{
     function index(Request $req){
-        if(checkFunction::checkLogin($req)){
+        return view("auth.login");
+        if(checkerFunction::checkLogin($req)){
             return redirect("/");
         }else{
             return view("auth.login");
@@ -20,7 +21,7 @@ class loginController extends Controller{
         if($req->has("login")){
             $id=1;
             $email="asd@asd.asd";
-            $password="$2y$12$ydblUwqOjiRtoZC1TyFgfO6R0l1mqo.e4DG4XyPxtgslo9kfBlvHm";
+            $password="$2y$12\$ydblUwqOjiRtoZC1TyFgfO6R0l1mqo.e4DG4XyPxtgslo9kfBlvHm";
             $isCorrect = Hash::check($req->input('password'),$password);
             if($isCorrect){
                 $loginData = [

@@ -5,11 +5,11 @@ use App\Http\Controllers\Controller;
 use DB;
 use Hash;
 
-use App\Functions\checkFunction;
+use App\Functions\checkerFunction;
 
 class dashboardController extends Controller{
     function index(Request $req){
-        if(checkFunction::checkLogin($req)){
+        if(checkerFunction::checkLogin($req)){
             return view("dashboard");
         }else{
             return redirect("/login");
