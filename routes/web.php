@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',"dashboardController@index");
 
+Route::get('/register',"Auth\\registerController@index");
+Route::post('/register',"Auth\\registerController@register");
+
 Route::post('/login',"Auth\loginController@login");
 Route::get('/login',"Auth\loginController@index");
 

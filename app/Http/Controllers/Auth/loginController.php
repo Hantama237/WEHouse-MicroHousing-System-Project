@@ -19,9 +19,13 @@ class loginController extends Controller{
     function login(Request $req){
         //bcrypt(str);
         if($req->has("login")){
-            $id=1;
-            $email="asd@asd.asd";
-            $password="$2y$12\$ydblUwqOjiRtoZC1TyFgfO6R0l1mqo.e4DG4XyPxtgslo9kfBlvHm";
+            $user = DB::table("users")->where("email",$req->input('email'))->first();
+            if(is_null($user)){
+                return redirect()->back()->withErrors(['msg', 'Invalid email/password']);
+            }
+            $id=$user->id;
+            $email=$user->email;
+            $password=$user->password;//"$2y$12\$ydblUwqOjiRtoZC1TyFgfO6R0l1mqo.e4DG4XyPxtgslo9kfBlvHm";
             $isCorrect = Hash::check($req->input('password'),$password);
             if($isCorrect){
                 $loginData = [
@@ -36,7 +40,7 @@ class loginController extends Controller{
         if($req->session()->get("login")){
             return redirect("/");
         }else{
-            return redirect("/login");
+            return redirect("/login")->withErrors(['msg', 'Invalid email/password']);
         }
     }
 }
