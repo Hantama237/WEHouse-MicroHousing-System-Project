@@ -28,7 +28,7 @@ Route::get("/logout","Auth\logoutController@index");
 Route::get('/residences', function () {
     return view('viewResidence');
 });
-Route::get('/residences', function () {
+Route::get('/history', function () {
     return view('history');
 });
 
