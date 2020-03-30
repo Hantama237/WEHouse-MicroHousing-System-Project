@@ -98,9 +98,7 @@
                         </p>
                                             </div>
                     <div class="accordion">
-                        @if($success)
-                          
-                            @endphp
+                        
                             
 
                             <h3>Informasi Keberangkatan</h3>
@@ -154,7 +152,7 @@
                                 
                                     
                                 </div>
-                                @endif
+                             
                                 {{-- flight = null --}}
                              
                                    
