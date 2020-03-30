@@ -55,7 +55,7 @@
         }
     </script>
     <div class="container">
-        @php              
+        {{-- @php              
             function getDateText($date,$full){
                 //2019-12-13 12:06
                 $getDate=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
@@ -84,34 +84,22 @@
                 return $jam.' Jam '.$menit.' Menit ';
             }
             //$isNotValid=false;
-        @endphp
+        @endphp --}}
         <div class="row">
             
             <!-- Start accordion -->
             <div class="col-md-7">
                 <div class="col-xs-12" style="background-color: white;">
                     <div style="">
-                        <h5 class="text-uppercase">@if($success)Book Berhasil @else<span style="color:red;">Book Gagal</span> @endif</h5>
-                        @if($success)
+                        <h5 class="text-uppercase">@</h5>
+                        
                         <p>
                         Kode Booking <span class="kodeBook"><br>
                         </p>
-                        @endif
-                    </div>
+                                            </div>
                     <div class="accordion">
                         @if($success)
-                            @if($isPP?$book['flight']['go']!=null && $book['flight']['back']!=null :$book['flight']!=null)
-                            @php
-                                $depart=$isPP?$book['flight']['go'][0]:$book['flight'][0];
-                                $arrive=$isPP?$book['flight']['go'][(count($book['flight']['go'])-1)]:$book['flight'][(count($book['flight'])-1)];
-                                $departBack=null;
-                                $arriveBack=null;
-                                if($isPP){
-                                    $departBack=$book['flight']['back'][0];
-                                    $arriveBack=$book['flight']['back'][(count($book['flight']['back'])-1)];
-                                }
-                                $goFlight=$isPP?$book['flight']['go']:$book['flight'];
-                                $backFlight=$isPP?$book['flight']['back']:null;
+                          
                             @endphp
                             
 
@@ -131,16 +119,7 @@
                             <h3>Informasi Penerbangan</h3>
                             <div>
                                 {{--  --}}
-                                @if($isPP)<h6>Pergi</h6>
-                                <div class="col-xs-12"><hr class="row"></div>
-                                @endif
-                                @if($goFlight!=null)
-                                <div id="detailPenerbangan1" class="detailPenerbangan">
-                                    @php $in=0; @endphp
-                                    @foreach ($goFlight as $p)
-                                        @php
-                                            ++$in;
-                                        @endphp
+                                
                                         {{--  --}}
                                         <div class="col-xs-12 penerbangan">
                                             <div class="col-xs-2" style="color:#0091EA; font-weight:600; font-size:17px; text-align:center;"></div>
@@ -185,16 +164,8 @@
                                 </div>
                                 @endif
                                 {{-- flight = null --}}
-                                @if($isPP)
-                                    @if($isPP)<h6>Pulang</h6>
-                                    <div class="col-xs-12"><hr class="row"></div>
-                                    @endif
-                                    
-                                    @php $in=0; @endphp
-                                    @foreach ($backFlight as $p)   
-                                        @php
-                                            ++$in;
-                                        @endphp
+                             
+                                   
                                         {{--  --}}
                                         <div class="col-xs-12 penerbangan">
                                             <div class="col-xs-2" style="color:#0091EA; font-weight:600; font-size:17px; text-align:center;"></div>
@@ -224,16 +195,16 @@
                                         {{-- End item Penerbangan --}}
 
                                         {{-- ITEM transit --}}
-                                        @if(count($goFlight)!=$in)
+                                       
                                             <div class="col-xs-12" style="background-color:#eee; text-align:center; padding:10px; margin-bottom:15px;">
                                                 Transit Selama <span id="trans1">(waktu transit)</span> di )
                                             </div>
                                           
-                                        @endif
+                                       
                                         {{-- END item transit --}}
 
                                     @endforeach
-                                @endif
+                               
                             </div>
                             @else
                             <h3>Kesalahan Pemesanan</h3>
@@ -250,12 +221,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @php $in=0; @endphp
-                                        @foreach ($book['passengers'] as $p)
-                                            <tr>
-                                                
-                                            </tr>
-                                        @endforeach
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -312,7 +278,7 @@
                     color: #0091EA;
                 }
             </style>
-            @if($success)
+            
             <div class="col-md-5" style="position: relative; margin-top: 50px;">
                 <div class="col-xs-12" style="background-color: white; overflow: auto; padding-bottom: 15px;">
                     <h5>Informasi Pembayaran</h5>
