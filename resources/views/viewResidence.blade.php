@@ -1,5 +1,5 @@
-@extends('master1')
-@section('konten')
+@extends('master')
+@section('content')
 <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
 <section class="pt-80 pb-80 bg-border" style="margin-bottom: 100px; ">
     <style>
@@ -55,7 +55,7 @@
         }
     </script>
     <div class="container">
-        @php              
+        {{-- @php              
             function getDateText($date,$full){
                 //2019-12-13 12:06
                 $getDate=["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
@@ -84,66 +84,48 @@
                 return $jam.' Jam '.$menit.' Menit ';
             }
             //$isNotValid=false;
-        @endphp
+        @endphp --}}
         <div class="row">
             
             <!-- Start accordion -->
             <div class="col-md-7">
                 <div class="col-xs-12" style="background-color: white;">
                     <div style="">
-                        <h5 class="text-uppercase">@if($success)Book Berhasil @else<span style="color:red;">Book Gagal</span> @endif</h5>
-                        @if($success)
+                        <h5 class="text-uppercase">@</h5>
+                        
                         <p>
-                        Kode Booking <span class="kodeBook"></span><br>
-                        Tanggal Booking WIB<br>
-                        Batas Pembayaran  WIB<br>
+
+                        Kode Booking <span class="kodeBook"><br>
+
                         </p>
-                        @endif
-                    </div>
+                                            </div>
                     <div class="accordion">
-                        @if($success)
-                            @if($isPP?$book['flight']['go']!=null && $book['flight']['back']!=null :$book['flight']!=null)
-                            @php
-                                $depart=$isPP?$book['flight']['go'][0]:$book['flight'][0];
-                                $arrive=$isPP?$book['flight']['go'][(count($book['flight']['go'])-1)]:$book['flight'][(count($book['flight'])-1)];
-                                $departBack=null;
-                                $arriveBack=null;
-                                if($isPP){
-                                    $departBack=$book['flight']['back'][0];
-                                    $arriveBack=$book['flight']['back'][(count($book['flight']['back'])-1)];
-                                }
-                                $goFlight=$isPP?$book['flight']['go']:$book['flight'];
-                                $backFlight=$isPP?$book['flight']['back']:null;
-                            @endphp
+                        
                             
 
                             <h3>Informasi Keberangkatan</h3>
                             <div >
-                               <p>ssss</p>
+
+                                <p>
+                                   <br>
+                                   
+                                </p>
+
                             </div>
                             
                             <h3>Informasi Penerbangan</h3>
                             <div>
                                 {{--  --}}
-                                @if($isPP)<h6>Pergi</h6>
-                                <div class="col-xs-12"><hr class="row"></div>
-                                @endif
-                                @if($goFlight!=null)
-                                <div id="detailPenerbangan1" class="detailPenerbangan">
-                                    @php $in=0; @endphp
-                                    @foreach ($goFlight as $p)
-                                        @php
-                                            ++$in;
-                                        @endphp
+                                
                                         {{--  --}}
                                         <div class="col-xs-12 penerbangan">
-                                            <div class="col-xs-2" style="color:#0091EA; font-weight:600; font-size:17px; text-align:center;">{{$p['flight_num']}}</div>
+                                            <div class="col-xs-2" style="color:#0091EA; font-weight:600; font-size:17px; text-align:center;"></div>
                                             <div class="col-xs-2" style="">
                                                 <div class="row waktu">
                                                    
                                                 </div>
                                                 <div class="row">
-                                                
+
                                                 </div>
                                             </div>
                                             <div class="col-xs-4" style=" text-align:center;">
@@ -153,10 +135,12 @@
                                             </div>
                                             <div class="col-xs-2 arriveTime" style="text-align:right;">
                                                 <div class="row waktu" >
-                                        
+
+                                                 
                                                 </div>
                                                 <div class="row">
-                                                   
+                                            
+
                                                 </div>
                                             </div> 
                                             <div class="col-xs-2"></div>
@@ -164,40 +148,30 @@
                                         {{-- End item Penerbangan --}}
 
                                         {{-- ITEM transit --}}
-                                        @if(count($goFlight)!=$in)
+                                      
                                             <div class="col-xs-12" style="background-color:#eee; text-align:center; padding:10px; margin-bottom:15px;">
-                                                Transit Selama <span id="trans{{$in}}">(waktu transit)</span> di {{$p['arrive_city']}} ({{$p['arrive_port']}})
+                                                Transit Selama <span id="trans">(waktu transit)</span> di )
                                             </div>
-                                            <script>
-                                                idList.push({!!json_encode($in)!!});
-                                                $('#trans'+idList[{!!json_encode($in-1)!!}]).text(getTransitDuration({!!json_encode($p['arrive_datetime'])!!},{!!json_encode($goFlight[$in]["depart_datetime"])!!}));
-                                            </script>
-                                        @endif
+                                            
+                                
                                         {{-- END item transit --}}
-                                    @endforeach
+                                
                                     
                                 </div>
-                                @endif
+                             
                                 {{-- flight = null --}}
-                                @if($isPP)
-                                    @if($isPP)<h6>Pulang</h6>
-                                    <div class="col-xs-12"><hr class="row"></div>
-                                    @endif
-                                    
-                                    @php $in=0; @endphp
-                                    @foreach ($backFlight as $p)   
-                                        @php
-                                            ++$in;
-                                        @endphp
+                             
+                                   
                                         {{--  --}}
                                         <div class="col-xs-12 penerbangan">
-                                            <div class="col-xs-2" style="color:#0091EA; font-weight:600; font-size:17px; text-align:center;">{{$p['flight_num']}}</div>
+                                            <div class="col-xs-2" style="color:#0091EA; font-weight:600; font-size:17px; text-align:center;"></div>
                                             <div class="col-xs-2" style="">
                                                 <div class="row waktu">
-                                                   
+                                                    
                                                 </div>
                                                 <div class="row">
-                                                
+                                         
+
                                                 </div>
                                             </div>
                                             <div class="col-xs-4" style=" text-align:center;">
@@ -210,7 +184,7 @@
                                                    
                                                 </div>
                                                 <div class="row">
-                                                   
+
                                                 </div>
                                             </div> 
                                             <div class="col-xs-2"></div>
@@ -218,24 +192,21 @@
                                         {{-- End item Penerbangan --}}
 
                                         {{-- ITEM transit --}}
-                                        @if(count($goFlight)!=$in)
+                                       
                                             <div class="col-xs-12" style="background-color:#eee; text-align:center; padding:10px; margin-bottom:15px;">
-                                                Transit Selama <span id="trans1{{$in}}">(waktu transit)</span> di {{$p['arrive_city']}} ({{$p['arrive_port']}})
+                                                Transit Selama <span id="trans1">(waktu transit)</span> di )
                                             </div>
-                                            <script>
-                                                idList.push({!!json_encode($in)!!});
-                                                $('#trans1'+idList[{!!json_encode($in-1)!!}]).text(getTransitDuration({!!json_encode($p['arrive_datetime'])!!},{!!json_encode($goFlight[$in]["depart_datetime"])!!}));
-                                            </script>
-                                        @endif
+                                          
+                                       
                                         {{-- END item transit --}}
 
-                                    @endforeach
-                                @endif
+                                 
+                               
                             </div>
-                            @else
+                          
                             <h3>Kesalahan Pemesanan</h3>
                             <div>Terjadi Kesalahan Proses Pemesanan, Silahkan <a href="/tiket/pesawat">Pesan kembali</a></div>
-                            @endif
+                           
                             
                             <h3>Informasi Penumpang</h3>
                             <div>
@@ -247,13 +218,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @php $in=0; @endphp
-                                        @foreach ($book['passengers'] as $p)
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                        @endforeach
+
                                     </tbody>
                                 </table>
                             </div>
@@ -278,7 +243,7 @@
                     <div class="col-xs-12">
 
                     </div>
-                @endif
+         
                 {{-- End if succes --}}
             </div>
             <!-- END Accordion -->
@@ -310,7 +275,7 @@
                     color: #0091EA;
                 }
             </style>
-            @if($success)
+            
             <div class="col-md-5" style="position: relative; margin-top: 50px;">
                 <div class="col-xs-12" style="background-color: white; overflow: auto; padding-bottom: 15px;">
                     <h5>Informasi Pembayaran</h5>
@@ -321,7 +286,9 @@
 
                         </div>
                         <div class="col-xs-6" style="text-align: right;">
-                            <div class="row">Rp. </div>
+
+                            <div class="row">Rp.</div>
+
                             {{-- Am I right to put upSelling here? --}}
                             <div class="row">Rp. </div>
                         </div>
@@ -358,7 +325,9 @@
                             <div class="row">Sisa Saldo</div>
                         </div>
                         <div class="col-xs-6" style="text-align: right;">
-                            <div class="row sisa">Rp.</div>
+
+                            <div class="row sisa">Rp. </div>
+
                         </div>
 
                     </span>
@@ -391,7 +360,7 @@
                         <h6
                             style="font-size: 15px; margin-top: auto; margin-bottom: auto; position: absolute; top: 45%; color: #a6a6a6;">
                             Bayar Sebelum <span style="color: red; font-size: 14px;">&nbsp;
-                                WIB,</span>
+                                WIB, </span>
                         </h6>
                     </div>
                     <form id="pesawatForm" action="/tiket/pesawat/payment" method="POST">
@@ -407,7 +376,7 @@
                         </div>
                     </form>
                 </div>
-                @endif
+               
             </div>
 
         </div>
