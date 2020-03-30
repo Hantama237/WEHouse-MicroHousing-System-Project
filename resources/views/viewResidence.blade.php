@@ -94,7 +94,9 @@
                         <h5 class="text-uppercase">@</h5>
                         
                         <p>
+
                         Kode Booking <span class="kodeBook"><br>
+
                         </p>
                                             </div>
                     <div class="accordion">
@@ -103,10 +105,12 @@
 
                             <h3>Informasi Keberangkatan</h3>
                             <div >
+
                                 <p>
                                    <br>
                                    
                                 </p>
+
                             </div>
                             
                             <h3>Informasi Penerbangan</h3>
@@ -121,7 +125,7 @@
                                                    
                                                 </div>
                                                 <div class="row">
-                                            
+
                                                 </div>
                                             </div>
                                             <div class="col-xs-4" style=" text-align:center;">
@@ -131,10 +135,12 @@
                                             </div>
                                             <div class="col-xs-2 arriveTime" style="text-align:right;">
                                                 <div class="row waktu" >
+
                                                  
                                                 </div>
                                                 <div class="row">
                                             
+
                                                 </div>
                                             </div> 
                                             <div class="col-xs-2"></div>
@@ -165,6 +171,7 @@
                                                 </div>
                                                 <div class="row">
                                          
+
                                                 </div>
                                             </div>
                                             <div class="col-xs-4" style=" text-align:center;">
@@ -177,7 +184,7 @@
                                                    
                                                 </div>
                                                 <div class="row">
-                                                    
+
                                                 </div>
                                             </div> 
                                             <div class="col-xs-2"></div>
@@ -211,7 +218,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
+
                                     </tbody>
                                 </table>
                             </div>
@@ -279,7 +286,9 @@
 
                         </div>
                         <div class="col-xs-6" style="text-align: right;">
+
                             <div class="row">Rp.</div>
+
                             {{-- Am I right to put upSelling here? --}}
                             <div class="row">Rp. </div>
                         </div>
@@ -316,7 +325,9 @@
                             <div class="row">Sisa Saldo</div>
                         </div>
                         <div class="col-xs-6" style="text-align: right;">
+
                             <div class="row sisa">Rp. </div>
+
                         </div>
 
                     </span>

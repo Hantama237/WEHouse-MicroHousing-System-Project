@@ -13,9 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/',"dashboardController@index");
+
+Route::get('/register',"Auth\\registerController@index");
+Route::post('/register',"Auth\\registerController@register");
+
+Route::post('/login',"Auth\loginController@login");
+Route::get('/login',"Auth\loginController@index");
+
+Route::get("/logout","Auth\logoutController@index");
+
 Route::get('/residences', function () {
     return view('viewResidence');
 });
+
