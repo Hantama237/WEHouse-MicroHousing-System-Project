@@ -21,11 +21,11 @@ class registerController extends Controller{
         }
         if($req->has("register")){
             $req->validate([
-                "fullname"=>"required|string|digits:50",
+                "fullname"=>"required|string",
                 "email"=>"required|email",
                 "monthlyincome"=>"required|numeric",
-                "username"=>"required|digits_between:3,20",
-                "password"=>"required|digits_between:6,100|confirmed"
+                "username"=>"required",
+                "password"=>"required|confirmed"
             ]);
 
             $userData=[
@@ -36,8 +36,8 @@ class registerController extends Controller{
                 "password" => bcrypt($req->input("password")),
                 "role"=>0
             ];
-
-            if(checkerFunction::isUsernameExists($email,$username)){
+            //dd(checkerFunction::isUsernameExists($email,$username));
+            if(!checkerFunction::isUsernameExists($userData["email"],$userData["username"])){
                 DB::table("users")->insert($userData);
             }else{
                 return redirect()->back()->withInput();

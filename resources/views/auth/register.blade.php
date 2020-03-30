@@ -23,6 +23,7 @@
                     <label>Full Name</label>
                     <input type="text" name="fullname" value="{{old("fullname")}}">
                 </div>
+
                 <div class="form-item">
                     <label>Email</label>
                     <input type="email" name="email" value="{{old("email")}}">
@@ -30,6 +31,10 @@
                 <div class="form-item">
                     <label>Monthly Income (in $)</label>
                     <input type="number" name="monthlyincome" value="{{old("monthlyincome")}}">
+                </div>
+                <div class="form-item">
+                    <label>Username</label>
+                    <input type="text" name="username" value="{{old("username")}}">
                 </div>
                 <div class="form-item">
                     <label>Password</label>
@@ -41,7 +46,7 @@
                 </div>
                 <a href="#" class="terms-conditions">By registering, you accept terms &amp; conditions</a>
                 <div class="form-actions">
-                    <input type="submit" value="Register">
+                    <input name="register" type="submit" value="Register">
                 </div>
             </form>
             <div class="login-register-link">
