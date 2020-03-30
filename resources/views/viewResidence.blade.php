@@ -1,5 +1,5 @@
 @extends('master1')
-@section('konten')
+@section('content')
 <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
 <section class="pt-80 pb-80 bg-border" style="margin-bottom: 100px; ">
     <style>
