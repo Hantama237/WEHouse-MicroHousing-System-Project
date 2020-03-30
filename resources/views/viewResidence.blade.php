@@ -195,7 +195,7 @@
                                        
                                         {{-- END item transit --}}
 
-                                    @endforeach
+                                 
                                
                             </div>
                             @else
