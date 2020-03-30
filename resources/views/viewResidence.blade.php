@@ -107,12 +107,7 @@
                             <div >
                                 <p>
                                    <br>
-                                    @if($isPP)<h6> Pergi</h6>@endif                                    
-                                   <br>
-                                    @if($isPP)
-                                    <h6> Pulang</h6>
-                                    Beran
-                                    @endif
+                                   
                                 </p>
                             </div>
                             
@@ -149,17 +144,14 @@
                                         {{-- End item Penerbangan --}}
 
                                         {{-- ITEM transit --}}
-                                        @if(count($goFlight)!=$in)
+                                      
                                             <div class="col-xs-12" style="background-color:#eee; text-align:center; padding:10px; margin-bottom:15px;">
                                                 Transit Selama <span id="trans">(waktu transit)</span> di )
                                             </div>
-                                            <script>
-                                                idList.push({!!json_encode($in)!!});
-                                                $('#trans'+idList[{!!json_encode($in-1)!!}]).text(getTransitDuration({!!json_encode($p['arrive_datetime'])!!},{!!json_encode($goFlight[$in]["depart_datetime"])!!}));
-                                            </script>
-                                        @endif
+                                            
+                                
                                         {{-- END item transit --}}
-                                    @endforeach
+                                
                                     
                                 </div>
                                 @endif
