@@ -198,7 +198,7 @@
                                  
                                
                             </div>
-                            @else
+                          
                             <h3>Kesalahan Pemesanan</h3>
                             <div>Terjadi Kesalahan Proses Pemesanan, Silahkan <a href="/tiket/pesawat">Pesan kembali</a></div>
                             @endif
