@@ -238,7 +238,7 @@
                     <div class="col-xs-12">
 
                     </div>
-                @endif
+         
                 {{-- End if succes --}}
             </div>
             <!-- END Accordion -->
