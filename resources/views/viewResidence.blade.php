@@ -201,7 +201,7 @@
                           
                             <h3>Kesalahan Pemesanan</h3>
                             <div>Terjadi Kesalahan Proses Pemesanan, Silahkan <a href="/tiket/pesawat">Pesan kembali</a></div>
-                            @endif
+                           
                             
                             <h3>Informasi Penumpang</h3>
                             <div>
