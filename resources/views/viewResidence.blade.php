@@ -94,9 +94,7 @@
                         <h5 class="text-uppercase">@if($success)Book Berhasil @else<span style="color:red;">Book Gagal</span> @endif</h5>
                         @if($success)
                         <p>
-                        Kode Booking <span class="kodeBook">{{$book['ref_number']}}</span><br>
-                        Tanggal Booking {{getDateText($book['datetime_of_booking'],false)}}, {{substr($book['datetime_of_booking'],11)}} WIB<br>
-                        Batas Pembayaran {{getDateText($book['datetime_pay_by'],false)}}, {{substr($book['datetime_pay_by'],11)}} WIB<br>
+                        Kode Booking <span class="kodeBook"><br>
                         </p>
                         @endif
                     </div>
@@ -120,14 +118,12 @@
                             <h3>Informasi Keberangkatan</h3>
                             <div >
                                 <p>
-                                    {{$depart['depart_city']}} ({{$depart['depart_port']}}) ke {{$arrive['arrive_city']}} ({{$arrive['arrive_port']}}) <br>
+                                   <br>
                                     @if($isPP)<h6> Pergi</h6>@endif                                    
-                                    Berangkat Pukul {{$depart['depart_time']}} (waktu {{$depart['depart_city']}}), pada {{getDateText($depart['depart_datetime'],true)}}<br>
-                                    Tiba pukul {{$arrive['arrive_time']}} (waktu {{$arrive['arrive_city']}}), pada {{getDateText($arrive['arrive_datetime'],true)}}<br>
+                                   <br>
                                     @if($isPP)
                                     <h6> Pulang</h6>
-                                    Berangkat Pukul {{$departBack['depart_time']}} (waktu {{$arrive['arrive_city']}}), pada {{getDateText($departBack['depart_datetime'],true)}}<br>
-                                    Tiba pukul {{$arriveBack['arrive_time']}} (waktu {{$depart['depart_city']}}), pada {{getDateText($arriveBack['arrive_datetime'],true)}}<br>
+                                    Beran
                                     @endif
                                 </p>
                             </div>
@@ -147,26 +143,26 @@
                                         @endphp
                                         {{--  --}}
                                         <div class="col-xs-12 penerbangan">
-                                            <div class="col-xs-2" style="color:#0091EA; font-weight:600; font-size:17px; text-align:center;">{{$p['flight_num']}}</div>
+                                            <div class="col-xs-2" style="color:#0091EA; font-weight:600; font-size:17px; text-align:center;"></div>
                                             <div class="col-xs-2" style="">
                                                 <div class="row waktu">
-                                                    {{$p["depart_time"]}}
+                                                   
                                                 </div>
                                                 <div class="row">
-                                                    {{$p["depart_port"]}}
+                                            
                                                 </div>
                                             </div>
                                             <div class="col-xs-4" style=" text-align:center;">
-                                                <div class="row">{{getDurasi($p["flight_duration"])}}</div>
+                                                <div class="row"></div>
                                                 <div class="row"><hr style="margin: 3px 0px 3px 0px;"></div>
-                                                <div class="row" style="margin-bottom: 5px;">{{getDateNoYear($p["depart_datetime"],false)}} -> {{getDateNoYear($p["arrive_datetime"],false)}}</div>
+                                                <div class="row" style="margin-bottom: 5px;"></div>
                                             </div>
                                             <div class="col-xs-2 arriveTime" style="text-align:right;">
                                                 <div class="row waktu" >
-                                                    {{$p["arrive_time"]}}
+                                                 
                                                 </div>
                                                 <div class="row">
-                                                    {{$p['arrive_port']}}
+                                            
                                                 </div>
                                             </div> 
                                             <div class="col-xs-2"></div>
@@ -176,7 +172,7 @@
                                         {{-- ITEM transit --}}
                                         @if(count($goFlight)!=$in)
                                             <div class="col-xs-12" style="background-color:#eee; text-align:center; padding:10px; margin-bottom:15px;">
-                                                Transit Selama <span id="trans{{$in}}">(waktu transit)</span> di {{$p['arrive_city']}} ({{$p['arrive_port']}})
+                                                Transit Selama <span id="trans">(waktu transit)</span> di )
                                             </div>
                                             <script>
                                                 idList.push({!!json_encode($in)!!});
@@ -201,26 +197,26 @@
                                         @endphp
                                         {{--  --}}
                                         <div class="col-xs-12 penerbangan">
-                                            <div class="col-xs-2" style="color:#0091EA; font-weight:600; font-size:17px; text-align:center;">{{$p['flight_num']}}</div>
+                                            <div class="col-xs-2" style="color:#0091EA; font-weight:600; font-size:17px; text-align:center;"></div>
                                             <div class="col-xs-2" style="">
                                                 <div class="row waktu">
-                                                    {{$p["depart_time"]}}
+                                                    
                                                 </div>
                                                 <div class="row">
-                                                    {{$p["depart_port"]}}
+                                         
                                                 </div>
                                             </div>
                                             <div class="col-xs-4" style=" text-align:center;">
-                                                <div class="row">{{getDurasi(($p["flight_duration"]))}}</div>
+                                                <div class="row"></div>
                                                 <div class="row"><hr style="margin: 3px 0px 3px 0px;"></div>
-                                                <div class="row" style="margin-bottom: 5px;">{{getDateNoYear($p["depart_datetime"],false)}} -> {{getDateNoYear($p["arrive_datetime"],false)}}</div>
+                                                <div class="row" style="margin-bottom: 5px;"></div>
                                             </div>
                                             <div class="col-xs-2 arriveTime" style="text-align:right;">
                                                 <div class="row waktu" >
-                                                    {{$p["arrive_time"]}}
+                                                   
                                                 </div>
                                                 <div class="row">
-                                                    {{$p['arrive_port']}}
+                                                    
                                                 </div>
                                             </div> 
                                             <div class="col-xs-2"></div>
@@ -230,12 +226,9 @@
                                         {{-- ITEM transit --}}
                                         @if(count($goFlight)!=$in)
                                             <div class="col-xs-12" style="background-color:#eee; text-align:center; padding:10px; margin-bottom:15px;">
-                                                Transit Selama <span id="trans1{{$in}}">(waktu transit)</span> di {{$p['arrive_city']}} ({{$p['arrive_port']}})
+                                                Transit Selama <span id="trans1">(waktu transit)</span> di )
                                             </div>
-                                            <script>
-                                                idList.push({!!json_encode($in)!!});
-                                                $('#trans1'+idList[{!!json_encode($in-1)!!}]).text(getTransitDuration({!!json_encode($p['arrive_datetime'])!!},{!!json_encode($goFlight[$in]["depart_datetime"])!!}));
-                                            </script>
+                                          
                                         @endif
                                         {{-- END item transit --}}
 
@@ -260,8 +253,7 @@
                                         @php $in=0; @endphp
                                         @foreach ($book['passengers'] as $p)
                                             <tr>
-                                                <td>{{++$in}}</td>
-                                                <td>{{ucfirst(strtolower($p))}}</td>
+                                                
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -331,9 +323,9 @@
 
                         </div>
                         <div class="col-xs-6" style="text-align: right;">
-                            <div class="row">Rp. {{number_format($book['nta'], 2, ',', '.')}}</div>
+                            <div class="row">Rp.</div>
                             {{-- Am I right to put upSelling here? --}}
-                            <div class="row">Rp. {{number_format($book['fee']+$upSelling, 2, ',', '.')}}</div>
+                            <div class="row">Rp. </div>
                         </div>
                     </p>
                     <div class="col-xs-12">
@@ -345,7 +337,7 @@
 
                         </div>
                         <div class="col-xs-6" style="text-align: right;">
-                            <div class="row total">Rp. {{number_format(((int)$book['total_fare']+$upSelling), 2, ',', '.')}}</div>
+                            <div class="row total">Rp. </div>
 
                         </div>
                         <div class="col-xs-12">
@@ -357,7 +349,7 @@
                         </div>
                         <div class="col-xs-6" style="text-align: right;">
 
-                            <div class="row saldo">Rp. {{number_format(((int)$saldo), 2, ',', '.')}}</div>
+                            <div class="row saldo">Rp. </div>
                         </div>
                         <div class="col-xs-12">
                             <hr class="row" style="border-top: 1px solid #d4d4d4;">
@@ -368,7 +360,7 @@
                             <div class="row">Sisa Saldo</div>
                         </div>
                         <div class="col-xs-6" style="text-align: right;">
-                            <div class="row sisa">Rp. {{number_format(($saldo-((int)$book['total_fare']+$upSelling)), 2, ',', '.')}}</div>
+                            <div class="row sisa">Rp. </div>
                         </div>
 
                     </span>
@@ -400,15 +392,15 @@
                     <div class="payLimit">
                         <h6
                             style="font-size: 15px; margin-top: auto; margin-bottom: auto; position: absolute; top: 45%; color: #a6a6a6;">
-                            Bayar Sebelum <span style="color: red; font-size: 14px;">&nbsp;{{substr($book['datetime_pay_by'],11)}}
-                                WIB, {{getDateNoYear($book['datetime_pay_by'],false)}}</span>
+                            Bayar Sebelum <span style="color: red; font-size: 14px;">&nbsp;
+                                WIB, </span>
                         </h6>
                     </div>
                     <form id="pesawatForm" action="/tiket/pesawat/payment" method="POST">
                         <div class="payBtnContainer">
                             {{ csrf_field() }}
-                            <input type="hidden" name="paymentKey" value="{{$key}}">
-                            <input type="hidden" name="kodeBook" value="{{$book['ref_number']}}">
+                            <input type="hidden" name="paymentKey" value="">
+                            <input type="hidden" name="kodeBook" value="">
                             <input type="hidden" name="bayar">
                         <button onclick="bayarPesawatClick('#pesawatForm');" type="button"  class="awe-btn" id="payBtn"
                                 style=" background-color: #0091EA; color: white;  margin-top: 15px;">
