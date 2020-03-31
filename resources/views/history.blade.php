@@ -49,7 +49,7 @@
                                             <thead>
                                                 <tr>
                                                     <th class="route">Unit Available</th>
-                                                    <th class="depart">Date Available</th>
+                                                    <th class="depart">Available</th>
                                                     
                                                 </tr>
                                             </thead>
@@ -93,7 +93,7 @@
                                             <thead>
                                                 <tr>
                                                     <th class="route">Unit Available</th>
-                                                    <th class="depart">Date Available</th>
+                                                    <th class="depart">Available</th>
                                                     
                                                 </tr>
                                             </thead>
@@ -137,7 +137,7 @@
                                             <thead>
                                                 <tr>
                                                     <th class="route">Unit Available</th>
-                                                    <th class="depart">Date Available</th>
+                                                    <th class="depart">Available</th>
                                                     
                                                 </tr>
                                             </thead>
@@ -181,7 +181,7 @@
                                             <thead>
                                                 <tr>
                                                     <th class="route">Unit Available</th>
-                                                    <th class="depart">Date Available</th>
+                                                    <th class="depart">Available</th>
                                                     
                                                 </tr>
                                             </thead>
