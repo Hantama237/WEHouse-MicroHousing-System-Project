@@ -28,6 +28,7 @@ Route::get("/logout","Auth\logoutController@index");
 
 //============== Housing Officer ========//
 
+
 Route::get('/residences/setup',"setUpResidenceController@index");
 
 //============== Applicant ===============//
@@ -38,7 +39,13 @@ Route::get('/residences', function () {
 Route::get('/history', function () {
     return view('history');
 });
+
+
+// ============== Admin ==================//
+
+
 Route::get('/applications', function () {
     return view('viewApplication');
 });
+
 
