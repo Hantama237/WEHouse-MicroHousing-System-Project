@@ -30,6 +30,9 @@ Route::get("/logout","Auth\logoutController@index");
 
 
 Route::get('/residences/setup',"setUpResidenceController@index");
+Route::get('/applications', function () {
+    return view('viewApplication');
+});
 
 //============== Applicant ===============//
 
@@ -44,8 +47,6 @@ Route::get('/history', function () {
 // ============== Admin ==================//
 
 
-Route::get('/applications', function () {
-    return view('viewApplication');
-});
+
 
 
