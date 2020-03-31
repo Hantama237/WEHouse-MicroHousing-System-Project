@@ -39,6 +39,6 @@ Route::get('/history', function () {
     return view('history');
 });
 Route::get('/applications', function () {
-    return view('viewApplicant');
+    return view('viewApplication');
 });
 
