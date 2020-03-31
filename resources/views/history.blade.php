@@ -31,7 +31,14 @@
                                 <li class="current-menu-item"><a href="index3.html">House Officer</a></li>
                             </ul>
                         </li>
-                      
+                        <li class="menu-item-has-children current-menu-parent">
+                            <a href="index.html">Information</a>
+                            <ul class="sub-menu">
+                                <li><a href="index.html">Account</a></li>
+                                <li><a href="index2.html">Applicant</a></li>
+                                <li class="current-menu-item"><a href="index3.html">House Officer</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
                 <!-- END / NAVIGATION -->
@@ -463,62 +470,7 @@
 
 
 
-        <!-- FOOTER PAGE -->
-        <footer id="footer-page">
-            <div class="container">
-                <div class="row">
-                    <!-- WIDGET -->
-                    <div class="col-md-3">
-                        <div class="widget widget_contact_info">
-                            <div class="widget_background">
-                                <div class="widget_background__half">
-                                    <div class="bg"></div>
-                                </div>
-                                <div class="widget_background__half">
-                                    <div class="bg"></div>
-                                </div>
-                            </div>
-                            <div class="logo">
-                                <img src="images/logo-footer.png" alt="">
-                            </div>
-                            <div class="widget_content">
-                              
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END / WIDGET -->
-
-                    <!-- WIDGET -->
-                    <div class="col-md-2">
-                        <div class="widget widget_about_us">
-                            <h3>About Us</h3>
-                            <div class="widget_content">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END / WIDGET -->
-
-                    <!-- WIDGET -->
-                    <div class="col-md-2">
-                        <div class="widget widget_categories">
-                            <h3>Categiries</h3>
-                            <ul>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- END / WIDGET -->
-
-                    
-
-                    
-                </div>
-                <div class="copyright">
-                    <p>©2015 GOFAR travel™ All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-        <!-- END / FOOTER PAGE -->
+       
 
     </div>
     <!-- END / PAGE WRAP -->
