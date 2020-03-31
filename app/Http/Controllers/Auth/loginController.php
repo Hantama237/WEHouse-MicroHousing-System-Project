@@ -27,10 +27,12 @@ class loginController extends Controller{
             $email=$user->email;
             $password=$user->password;//"$2y$12\$ydblUwqOjiRtoZC1TyFgfO6R0l1mqo.e4DG4XyPxtgslo9kfBlvHm";
             $isCorrect = Hash::check($req->input('password'),$password);
+            $role = $user->role;
             if($isCorrect){
                 $loginData = [
                     "login"=>true,
-                    "id"=>$id
+                    "id"=>$id,
+                    "role"=>$role
                 ];
                 $req->session()->put(
                     $loginData

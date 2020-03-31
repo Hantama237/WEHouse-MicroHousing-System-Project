@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+//============= General ==============//
 
 Route::get('/',"dashboardController@index");
 
@@ -25,13 +26,19 @@ Route::get('/login',"Auth\loginController@index");
 
 Route::get("/logout","Auth\logoutController@index");
 
+//============== Housing Officer ========//
+
+Route::get('/residences/setup',"setUpResidenceController@index");
+
+//============== Applicant ===============//
+
 Route::get('/residences', function () {
     return view('viewResidence');
 });
 Route::get('/history', function () {
     return view('history');
 });
-Route::get('/viewApplicant', function () {
+Route::get('/applications', function () {
     return view('viewApplicant');
 });
 
