@@ -8,68 +8,7 @@
         <!-- PRELOADER -->
         <div class="preloader"></div>
         <!-- END / PRELOADER -->
-
         
-        <!-- HEADER PAGE -->
-        <header id="header-page">
-            <div class="header-page__inner">
-                <div class="container">
-                    <!-- LOGO -->
-                    <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt=""></a>
-                    </div>
-                    <!-- END / LOGO -->
-                    
-                   <!-- NAVIGATION -->
-                   <nav class="navigation awe-navigation-hamburger">
-                    <ul class="menu-list">
-                        <li class="menu-item-has-children current-menu-parent">
-                            <a href="index.html">Information</a>
-                            <ul class="sub-menu">
-                                <li><a href="index.html">Account</a></li>
-                                <li><a href="index2.html">Applicant</a></li>
-                                <li class="current-menu-item"><a href="index3.html">House Officer</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children current-menu-parent">
-                            <a href="index.html">Information</a>
-                            <ul class="sub-menu">
-                                <li><a href="index.html">Account</a></li>
-                                <li><a href="index2.html">Applicant</a></li>
-                                <li class="current-menu-item"><a href="index3.html">House Officer</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- END / NAVIGATION -->
-               
-                    
-                    <!-- SEARCH BOX -->
-                    <div class="search-box">
-                        <span class="searchtoggle"><i class="awe-icon awe-icon-search"></i></span>
-                        <form class="form-search">
-                            <div class="form-item">
-                                <input type="text" value="Search &amp; hit enter">
-                            </div>
-                        </form>
-                    </div>
-                    <!-- END / SEARCH BOX -->
-
-
-                    <!-- TOGGLE MENU RESPONSIVE -->
-                    <a class="toggle-menu-responsive" href="#">
-                        <div class="hamburger">
-                            <span class="item item-1"></span>
-                            <span class="item item-2"></span>
-                            <span class="item item-3"></span>
-                        </div>
-                    </a>
-                    <!-- END / TOGGLE MENU RESPONSIVE -->
-                </div>
-            </div>
-        </header>
-        <!-- END / HEADER PAGE -->
-
         <!-- HEADING PAGE -->
         <section class="awe-parallax category-heading-section-demo">
             <div class="awe-overlay"></div>
