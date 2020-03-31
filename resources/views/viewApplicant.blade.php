@@ -74,7 +74,7 @@
                                             <button class="awe-btn">Allocate</button>
                                             
                                         </div>
-                                        <button class="awe-btn-1">Reject</button>
+                                        <button class="btn btn-danger">Reject</button>
                                     </div>
                                 </div>
                                 <!-- END / ITEM -->
