@@ -31,4 +31,7 @@ Route::get('/residences', function () {
 Route::get('/history', function () {
     return view('history');
 });
+Route::get('/viewApplicant', function () {
+    return view('viewApplicant');
+});
 
