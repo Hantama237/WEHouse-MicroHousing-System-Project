@@ -24,6 +24,7 @@
         
         <section class="filter-page">
             <div class="container">
+                <h2>Residences</h2>
                 <div class="row">
                     <div class="col-md-10">
                         <div class="filter-page__content">
