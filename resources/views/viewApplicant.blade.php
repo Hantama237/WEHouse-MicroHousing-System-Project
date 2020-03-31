@@ -74,6 +74,7 @@
                                             <button class="awe-btn">Allocate</button>
                                             
                                         </div>
+                                        <br>
                                         <button class="btn btn-danger">Reject</button>
                                     </div>
                                 </div>
