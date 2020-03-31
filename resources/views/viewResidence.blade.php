@@ -1,5 +1,8 @@
 @extends('master')
 @section('content')
+
+
+
     <!-- PAGE WRAP -->
     <div id="page-wrap">
         <!-- PRELOADER -->
@@ -21,6 +24,7 @@
         
         <section class="filter-page">
             <div class="container">
+                <h2>Residences</h2>
                 <div class="row">
                     <div class="col-md-10">
                         <div class="filter-page__content">
@@ -220,7 +224,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <div class="page-top">
+                        <div class="page-top" style="margin-left:-6px;">
                             <select class="awe-select">
                                 <option>Sort by Date</option>
                                 <option>Sort by Price</option>
