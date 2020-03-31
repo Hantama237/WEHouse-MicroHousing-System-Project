@@ -8,10 +8,17 @@ class checkerFunction{
         else
         return false;
     }
+    public static function checkHousingOfficer($req){
+        if($req->session()->get("role")==1)
+        return true;
+        else
+        return false;
+    }
     public static function isUsernameExists($email,$username){
         $emailExist = DB::table("users")->where("email",$email)->count()>0;
         $usernameExist = DB::table("users")->where("username",$username)->count()>0;
         return $emailExist || $usernameExist;
     }
+    
 }
 ?>

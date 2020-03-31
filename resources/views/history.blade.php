@@ -24,7 +24,7 @@
         
         <section class="filter-page">
             <div class="container">
-                <h2>Residences</h2>
+                <h2>History</h2>
                 <div class="row">
                     <div class="col-md-10">
                         <div class="filter-page__content">
@@ -66,10 +66,10 @@
                                     </div>
                                     <div class="item-price-more">
                                         <div class="price">
-                                            <span class="amount">$30/m</span>
-                                            
+                                            <span class="amount">Status</span>
+                                            Waiting
                                         </div>
-                                        <a href="flight-detail.html" class="awe-btn">Apply</a>
+                                        <a href="#" class="awe-btn">Cancel</a>
                                     </div>
                                 </div>
                                 <!-- END / ITEM -->
@@ -110,103 +110,14 @@
                                     </div>
                                     <div class="item-price-more">
                                         <div class="price">
-                                            <span class="amount">$30/m</span>
-                                            
+                                            <span class="amount">Status</span>
+                                            Waiting
                                         </div>
-                                        <a href="flight-detail.html" class="awe-btn">Apply</a>
+                                        <a href="#" class="awe-btn">Cancel</a>
                                     </div>
                                 </div>
                                 <!-- END / ITEM -->
-                                 <!-- ITEM -->
-                                 <div class="flight-item">
-                                   
-                                    <div class="item-body">
-                                        <div class="item-title">
-                                            <h2>
-                                                <a href="flight-detail.html">House 3</a>
-                                            </h2>
-                                        </div>
-                                        <table class="item-table">
-                                            <thead>
-                                                <tr>
-                                                    <th class="route">Unit Available</th>
-                                                    <th class="depart">Available</th>
-                                                    
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="route">
-                                                        <ul>
-                                                            <li>2 <i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                            
-                                                        </ul>
-                                                    </td>
-                                                    <td class="depart">
-                                                        
-                                                        <span class="date">30 March</span>
-                                                    </td>
-                                                   
-                                                </tr>
-                                               
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="item-price-more">
-                                        <div class="price">
-                                            <span class="amount">$36/m</span>
-                                            
-                                        </div>
-                                        <a href="flight-detail.html" class="awe-btn">Apply</a>
-                                    </div>
-                                </div>
-                                <!-- END / ITEM -->
-                                 <!-- ITEM -->
-                                 <div class="flight-item">
-                                   
-                                    <div class="item-body">
-                                        <div class="item-title">
-                                            <h2>
-                                                <a href="flight-detail.html">House 4</a>
-                                            </h2>
-                                        </div>
-                                        <table class="item-table">
-                                            <thead>
-                                                <tr>
-                                                    <th class="route">Unit Available</th>
-                                                    <th class="depart">Available</th>
-                                                    
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="route">
-                                                        <ul>
-                                                            <li>1 <i class="awe-icon awe-icon-arrow-right"></i></li>
-                                                            
-                                                        </ul>
-                                                    </td>
-                                                    <td class="depart">
-                                                        
-                                                        <span class="date">30 May</span>
-                                                    </td>
-                                                   
-                                                </tr>
-                                               
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="item-price-more">
-                                        <div class="price">
-                                            <span class="amount">$20/m</span>
-                                            
-                                        </div>
-                                        <a href="flight-detail.html" class="awe-btn">Apply</a>
-                                    </div>
-                                </div>
-                                <!-- END / ITEM -->
-
-
+                              
                                
                             </div>
 
