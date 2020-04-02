@@ -29,7 +29,7 @@ Route::get("/logout","Auth\logoutController@index");
 //============== Housing Officer ========//
 
 
-Route::get('/residences/setup',"setUpResidenceController@index");
+Route::get('/residences/setup',"Pages\setUpResidenceController@index");
 Route::get('/applications', function () {
     return view('viewApplication');
 });
