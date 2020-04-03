@@ -24,6 +24,8 @@ class loginController extends Controller{
                 return redirect()->back()->withErrors(['msg', 'Invalid email/password']);
             }
             $id=$user->id;
+            $name=$user->fullname;
+            $monthlyIncome=$user->monthly_income;
             $email=$user->email;
             $password=$user->password;//"$2y$12\$ydblUwqOjiRtoZC1TyFgfO6R0l1mqo.e4DG4XyPxtgslo9kfBlvHm";
             $isCorrect = Hash::check($req->input('password'),$password);
@@ -31,6 +33,8 @@ class loginController extends Controller{
             if($isCorrect){
                 $loginData = [
                     "login"=>true,
+                    "name"=>$name,
+                    "monthly_income"=>$monthlyIncome,
                     "id"=>$id,
                     "role"=>$role
                 ];

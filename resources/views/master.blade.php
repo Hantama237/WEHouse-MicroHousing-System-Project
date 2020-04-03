@@ -29,6 +29,7 @@
     {{-- Sweet alert --}}
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"> --}}
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.7.2/dist/sweetalert2.all.min.js"></script>
+    
     {{-- <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script> --}}
 
     <!-- MAIN STYLE -->
@@ -70,6 +71,21 @@
         .swal2-container {
             z-index: 10000;
         }
+        #header-page .logo img {
+            width: 35%;
+            max-height: 155px;
+            /* margin-top: 8px; */
+        }
+        .widget_background__half .bg {
+            background-image: none;
+            background: black;
+        }
+        .category-heading-section-demo {
+            height: 300px !important;
+            background-size: contain;
+            background-image: url({{asset("gofar/images/bg/sunset.jfif")}});
+            
+        }
     </style>
     <script>
         function bayarClick(formId,text){
@@ -102,7 +118,7 @@
                 <div class="container">
                     <!-- LOGO -->
                     <div class="logo">
-                        <a href="/home"><img style="max-width:60%;" src="{{asset('gofar/images/logo.png')}}" alt=""></a>
+                        <a href="/"><img  src="{{asset('gofar/images/logo.png')}}" alt=""></a>
                     </div>
                     <!-- END / LOGO -->
 
@@ -110,37 +126,37 @@
                     <nav class="navigation awe-navigation" data-responsive="1200">
                         <ul class="menu-list">
                             <!-- start menu -->
-                            {{-- <li class="menu-item-has-children">
+                            <li class="menu-item-has-children">
                                 @if (Session::has('login'))
                                 <a href="#">
 
                                     <div style="">
-                                        <div style="display:inline;"><img src="{{asset(Session::get('profil'))}}" alt=""
-                                                style="max-height:40px; margin-right:10px; border-radius: 50%;"></div>
-                                        &nbsp;<span id="namaUser">{{Session::get('nama')}}</span>
+                                        {{-- <div style="display:inline;"><img src="{{asset(Session::get('profil'))}}" alt=""
+                                                style="max-height:40px; margin-right:10px; border-radius: 50%;"></div> --}}
+                                        &nbsp;<span id="namaUser">{{Session::get('name')}}</span>
                                     </div>
                                 </a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="javascript:void(0)" style="color: #0091ea; font-size:15px; ">Rp {{number_format(Session::get('saldo'),2,",",".")}}</a>
+                                        <a href="javascript:void(0)" style="color: #0091ea; font-size:15px; "></a>
                                     </li>
-                                    <li >
+                                    {{-- <li >
                                         <a href="/admin">Admin</a>
-                                    </li>                                    
-                                    <li class="menu-item-has-children">
+                                    </li>                                     --}}
+                                    {{-- <li class="menu-item-has-children">
                                         <a href="#">Histori Tiket</a>
                                         <ul class="sub-menu">
                                             <li><a href="/tiket/pesawat/history">Pesawat</a></li>
                                             <li><a href="/tiket/bus/history">Bus</a></li>
                                             <li><a href="/home/kereta/history">Kereta Api</a></li>
                                         </ul>
-                                    </li>
+                                    </li> --}}
                                     <li>
                                         <a href="/logout">Logout</a>
                                     </li>
                                 </ul>
                                 @endif
-                            </li> --}}
+                            </li>
 
                         </ul>
                     </nav>
@@ -182,6 +198,7 @@
         <script type="text/javascript" src="{{asset('gofar/js/lib/jquery.magnific-popup.min.js')}}"></script>
         <script type='text/javascript' src="{{asset('gofar/js/lib/jquery-ui.js')}}"></script>
         <script type="text/javascript" src="{{asset('gofar/js/scripts.js')}}"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         {{-- <script type="text/javascript" src="{{asset('base64/jquery.base64.min.js')}}"></script> --}}
         {{-- Axios --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
@@ -204,7 +221,7 @@
                                 </div>
                             </div>
                             <div class="logo">
-                                <img src="{{asset('gofar/images/logo.png')}}" alt="">
+                                <img style="border-radius: 3px;" src="{{asset('gofar/images/img/logo.PNG')}}" alt="">
                             </div>
                             <div class="widget_content">
                                 {{-- <p>25 California Avenue, Santa Monica, California. USA</p>
@@ -281,7 +298,7 @@
                     <!-- END / WIDGET -->
                 </div>
                 <div class="copyright">
-                    <p>©2020 MyTrip travel™ All rights reserved.</p>
+                    <p>©2020 WEhouse™ All rights reserved.</p>
                 </div>
             </div>
         </footer>

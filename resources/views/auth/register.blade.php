@@ -1,5 +1,26 @@
 @extends('master')
 @section('content')
+<style>
+    .register-page-demo{
+        background-image: url({!!asset("gofar/images/login/Background.png")!!});
+        background-size: contain;
+    }
+    #page-wrap{
+        background-color: white !important;
+    }
+    #form-login{
+        background: #f7f7f7;
+    }
+    .login-register-page__content form:after {
+        background: #f7f7f7;
+    }
+    @media screen and (max-width: 600px) {
+        .register-page-demo{
+            background-image:none;
+            background-size: contain;
+        }
+    }
+</style>
 <section class="awe-parallax register-page-demo">
     <div class="awe-overlay"></div>
     <div class="container">
@@ -14,7 +35,7 @@
         @endif
         <div class="login-register-page__content">
             <div class="content-title">
-                <span>Find a affordable house</span>
+                <span>Find an affordable house</span>
                 <h2>JOIN US !</h2>
             </div>
             <form action="/register" method="POST">

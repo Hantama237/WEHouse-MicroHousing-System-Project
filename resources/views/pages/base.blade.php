@@ -10,6 +10,107 @@
             </div>
         </div>
     </section>
+    <style>
+        .box {
+            background-color: white;
+            padding-top: 20px;
+        }
+        .modal-header .close {
+            margin-top: -30px;
+        }
+        .modal-content{
+            box-shadow: none;
+            border-radius: 0px;
+            margin-top: 100px;
+        }
+    
+    </style>
+    <style>
+        .flight-item,
+        .trip-item,
+        .attraction-item,
+        .hotel-item {
+            min-height: 0px;
+        }
+
+        .flight-item .item-price-more a {
+            margin-top: 5px;
+        }
+
+        .flight-item {
+            background-color: #f9f9f9;
+            /* border: 2px solid #eee; */
+        }
+
+        .flight-item .item-body {
+            width: 80%;
+            padding: 15px 0px;
+            color: #666;
+        }
+
+        select {
+            width: 80%;
+            margin-bottom: 5px;
+        }
+
+        .flight-item .item-price-more {
+            padding: 0px 30px;
+            margin: 10px 0px;
+        }
+
+        .flight-item .item-price-more .price .amount {
+            font-size: 20px;
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        /* .col-xs-6.left {} */
+
+        .item-body .right {
+            text-align: right;
+        }
+
+        .col-xs-12.bottom {
+            margin-top: 10px;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        .desktop {
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+            .flight-item {
+                text-align: center;
+            }
+
+            .flight-item .item-body {
+                width: 100%;
+                padding: 15px 0px;
+                color: #666;
+            }
+
+            .awe-btn,
+            select {
+                width: 100% !important;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .desktop {
+                display: none;
+            }
+        }
+
+    </style>
     <!-- END / HEADING PAGE -->
     <!-- HERO SECTION -->
     {{-- <section class="hero-section">

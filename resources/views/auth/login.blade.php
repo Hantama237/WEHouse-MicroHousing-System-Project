@@ -1,5 +1,26 @@
 @extends('master')
 @section('content')
+<style>
+    .login-page-demo{
+        background-image: url({!!asset("gofar/images/login/Background.png")!!});
+        background-size: contain;
+    }
+    #page-wrap{
+        background-color: white !important;
+    }
+    #form-login{
+        background: #f7f7f7;
+    }
+    .login-register-page__content form:after {
+        background: #f7f7f7;
+    }
+    @media screen and (max-width: 600px) {
+        .login-page-demo{
+            background-image:none;
+            background-size: contain;
+        }
+    }
+</style>
 <section class="awe-parallax login-page-demo">
     <div class="awe-overlay"></div>
     <div class="container">
@@ -15,9 +36,9 @@
             @endif
             <div class="content-title">
                 <span>Welcome back</span>
-                <h2>EXPLORER!</h2>
+                <h2>WEfans!</h2>
             </div>
-            <form action="/login" method="POST">
+            <form id="form-login" action="/login" method="POST">
                 <div class="form-item">
                     <label>Email</label>
                     <input type="email" name="email">

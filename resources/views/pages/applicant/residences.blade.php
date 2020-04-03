@@ -7,7 +7,7 @@
     
     <div class="container">
         <span class="mobile">
-            @include("components.sideMenu")
+            @include("components.sideMenuApplicant")
         </span>
         <div class="col-lg-9">
             <h3>Residences</h3>
@@ -41,8 +41,8 @@
                                 </div>
                                 <div class="col-lg-6 right">
                                     <div class="row">
-                                        <div class="col-xs-12">Earliest date available : Today</div>
-                                        <div class="col-xs-12 bottom">{{count($applications[$i->id])}} Application</div>
+                                        <div class="col-xs-12">Earliest date available</div>
+                                        <div class="col-xs-12 bottom">Today</div>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                                 <div class="price">
                                     <span class="amount">${{$i->monthly_rental}}/m</span>
                                 </div>
-                                <a href="#" class="awe-btn">Edit</a>
+                                <button onclick="updateModal('{!!$i->id!!}','{{$i->name}}')" type="button" class="awe-btn" data-toggle="modal" data-target="#exampleModal">Apply</button>
                             </div>
                         </div>
                         <!-- END / ITEM -->
@@ -67,12 +67,12 @@
                         <option value="">Show available</option>
                         <option value="">Show Unavailable</option>
                     </select>
-                    <button data-toggle="modal" data-target="#exampleModal" class="awe-btn" style="width: 80%; margin-top: 10px;">Add Residences</button>
+                    {{-- <button data-toggle="modal" data-target="#exampleModal" class="awe-btn" style="width: 80%; margin-top: 10px;">Add Residences</button> --}}
                 </div>
             </div>
         </div>
         <span class="desktop">
-            @include("components.sideMenu")
+            @include("components.sideMenuApplicant")
         </span>
     </div>
 </section>
@@ -89,20 +89,20 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Set Up Residence</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Submit Application</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="/residences/submit" method="POST">
+        <form action="/residences/apply" method="POST">
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-xs-12"><input type="text" name="name" id="name" value="{{old("name")}}" placeholder="Name"></div>
-                    <div class="col-xs-12"><input type="text" name="address" id="address" value="{{old("address")}}" placeholder="Address"></div>
-                    <div class="col-xs-6"><input type="number" name="num_of_unit" id="num_of_unit" value="{{old("num_of_unit")}}" placeholder="Number of unit"></div>
-                    <div class="col-xs-6"><input type="number" name="unit_available" id="unit_available" value="{{old("unit_available")}}" placeholder="Number of unit available"></div>
-                    <div class="col-xs-6"><input type="number" name="size_per_unit" id="size_per_unit" value="{{old("size_per_unit")}}" placeholder="Size per unit"></div>
-                    <div class="col-xs-6"><input type="number" name="monthly_rental" id="monthly_rental" value="{{old("monthly_rental")}}" placeholder="Monthly rental"></div>
+                    <div class="col-xs-12"><input type="text" name="application_date" class="awe-calendar" value="{{old("application_date")}}" placeholder="Application date"></div>
+                    <div class="col-xs-6"><input type="number" name="required_year" id="required_year" value="{{old("required_year")}}" placeholder="Required year"></div>
+                    <div class="col-xs-6"><input type="number" name="required_month" id="required_month" value="{{old("required_month")}}" placeholder="Required month"></div>
+                    <div class="col-xs-12"><label for="residence_name">Residence</label></div>
+                    <div class="col-xs-12"><input type="text" readonly aria-readonly="true" name="residence_name" id="residence_name" value="{{old("residence_name")}}" placeholder="Please re-apply"></div>
+                    <input type="hidden" readonly aria-readonly="true" name="residence_id" id="residence_id" value="{{old("residence_id")}}" placeholder="Please re-apply">
                     @csrf
                 </div>
             </div>
@@ -116,5 +116,11 @@
   </div>
 {{-- End Model --}}
 <!-- END / SEARCH TABS -->
+<script>
+    function updateModal(id,name){
+        $("#residence_id").val(id);
+        $("#residence_name").val(name);
+    }
+</script>
 
 @endsection

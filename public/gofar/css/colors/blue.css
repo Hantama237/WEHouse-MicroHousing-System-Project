@@ -1,13 +1,11 @@
-
-
 ::-moz-selection {
-  color: #fff;
-  background-color: #0091EA;
+    color: #fff;
+    background-color: #3eb842;
 }
 
 ::selection {
-  color: #fff;
-  background-color: #0091EA;
+    color: #fff;
+    background-color: #3eb842;
 }
 
 
@@ -20,7 +18,7 @@
 .cart-footer .shipping-handling .check-shipping-rate .form-submit .button:hover,
 .cart-footer .cart-subtotal .coupon-code .button:hover,
 .checkout-page__content #payment .place-order input,
-.checkout-page__content #payment > .payment_methods li input[type="radio"]:checked ~ label:before,
+.checkout-page__content #payment>.payment_methods li input[type="radio"]:checked~label:before,
 .checkout-page__content .coupon .form-row.form-row-last .button:hover,
 .checkout-page__sidebar ul li.current a,
 .page-sidebar .widget_latest_post ul li:hover:before,
@@ -51,7 +49,7 @@
 .blog-heading-content h2,
 #footer-page .widget_contact_info .widget_background__half:after,
 .category-heading-content .find .form-actions input,
-.category-heading-content > h3,
+.category-heading-content>h3,
 .trip-flight-hotel__table tbody tr:hover .item-price,
 .awe-masonry .awe-masonry__item .item-cat ul li a:hover,
 .destination-grid-content .more-destination:before,
@@ -68,24 +66,26 @@
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover,
 .price-slider .ui-slider-handle,
 .price-slider .ui-slider-range,
-mark, .mark,
+mark,
+.mark,
 .body-dark .room-type-popup .calendar-body tbody .item-calendar.item-active,
 .body-dark .awe-btn.awe-btn-style3,
-.body-dark .awe-btn:focus, .body-dark .awe-btn:hover,
+.body-dark .awe-btn:focus,
+.body-dark .awe-btn:hover,
 #page-wrap.dark .booking-info,
-#page-wrap.dark ~ .ui-datepicker .ui-datepicker-calendar .ui-state-active,
-#page-wrap.dark ~ .ui-datepicker .ui-datepicker-calendar .ui-widget-content .ui-state-active,
-#page-wrap.dark ~ .ui-datepicker .ui-datepicker-calendar .ui-widget-header .ui-state-active,
-#page-wrap.dark ~ .ui-datepicker .ui-datepicker-calendar tbody tr td a:hover,
-#page-wrap.dark ~ .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover,
-#page-wrap.dark ~ .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover,
+#page-wrap.dark~.ui-datepicker .ui-datepicker-calendar .ui-state-active,
+#page-wrap.dark~.ui-datepicker .ui-datepicker-calendar .ui-widget-content .ui-state-active,
+#page-wrap.dark~.ui-datepicker .ui-datepicker-calendar .ui-widget-header .ui-state-active,
+#page-wrap.dark~.ui-datepicker .ui-datepicker-calendar tbody tr td a:hover,
+#page-wrap.dark~.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover,
+#page-wrap.dark~.ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover,
 #page-wrap.dark .travelling-tabs__time .season .item.hover-active a .awe-icon,
 #page-wrap.dark .login-register-page__content form:after,
 #page-wrap.dark #comments .comment-abs a:hover,
 #page-wrap.dark .post-footer .cat-box .cat a:hover,
 #page-wrap.dark .post-footer .tag-box .tag a:hover,
 #page-wrap.dark .tagcloud a:hover,
-#page-wrap.dark .page__pagination span.current, 
+#page-wrap.dark .page__pagination span.current,
 #page-wrap.dark .page__pagination span:hover,
 #page-wrap.dark .page__pagination a.current,
 #page-wrap.dark .page__pagination a:hover,
@@ -93,15 +93,17 @@ mark, .mark,
 #page-wrap.dark .awe-search-tabs .ui-tabs-nav:before,
 #page-wrap.dark #header-page .header-page__inner,
 #page-wrap.dark #header-page,
-#page-wrap.dark .awe-btn:focus, #page-wrap.dark .awe-btn:hover,
+#page-wrap.dark .awe-btn:focus,
+#page-wrap.dark .awe-btn:hover,
 #page-wrap.dark .awe-btn.awe-btn-style3,
 .room-type-popup .calendar-body tbody .item-calendar.item-active,
 #reviews #add_review form .form-submit .submit,
-.awe-btn:focus, .awe-btn:hover,
+.awe-btn:focus,
+.awe-btn:hover,
 .tagcloud a:hover,
 .awe-btn.awe-btn-style3,
 .awe-color {
-  background-color: #0091EA;
+    background-color: #3eb842;
 }
 
 
@@ -111,14 +113,14 @@ mark, .mark,
 #page-wrap.dark .room-type-table tbody td.room-type .room-title h4,
 #page-wrap.dark .product-detail__info .product-address:hover,
 #page-wrap.dark .product-detail__info .product-email a:hover,
-#page-wrap.dark ~ .ui-datepicker .ui-datepicker-header .ui-datepicker-title,
-#page-wrap.dark .flight-item .item-price-more .price > .amount,
+#page-wrap.dark~.ui-datepicker .ui-datepicker-header .ui-datepicker-title,
+#page-wrap.dark .flight-item .item-price-more .price>.amount,
 #page-wrap.dark .flight-item .item-price-more .price ins .amount,
-#page-wrap.dark .trip-item .item-price-more .price > .amount,
+#page-wrap.dark .trip-item .item-price-more .price>.amount,
 #page-wrap.dark .trip-item .item-price-more .price ins .amount,
-#page-wrap.dark .attraction-item .item-price-more .price > .amount,
+#page-wrap.dark .attraction-item .item-price-more .price>.amount,
 #page-wrap.dark .attraction-item .item-price-more .price ins .amount,
-#page-wrap.dark .hotel-item .item-price-more .price > .amount,
+#page-wrap.dark .hotel-item .item-price-more .price>.amount,
 #page-wrap.dark .hotel-item .item-price-more .price ins .amount,
 #page-wrap.dark .flight-item .item-body .item-title h2 a,
 #page-wrap.dark .trip-item .item-body .item-title h2 a,
@@ -158,16 +160,16 @@ mark, .mark,
 #page-wrap.dark .accordion .ui-accordion-header,
 #page-wrap.dark .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
 #page-wrap.dark .heading-content h2,
-#page-wrap.dark .awe-navigation .menu-list li .sub-menu li:hover > a, 
-#page-wrap.dark .awe-navigation .menu-list li .sub-menu li.current-menu-parent > a, 
-#page-wrap.dark .awe-navigation .menu-list li .sub-menu li.current-menu-item > a,
+#page-wrap.dark .awe-navigation .menu-list li .sub-menu li:hover>a,
+#page-wrap.dark .awe-navigation .menu-list li .sub-menu li.current-menu-parent>a,
+#page-wrap.dark .awe-navigation .menu-list li .sub-menu li.current-menu-item>a,
 .room-type-popup .calendar-header .calendar-prev:hover,
 .room-type-popup .calendar-header .calendar-next:hover,
 .room-type-popup .mfp-close:hover,
 .sale-flight-popup .mfp-close:hover,
-.booking-info .add-room-type > a:hover,
-.services-on-flight .item label > input[type="radio"]:checked ~ .awe-icon-check,
-.services-on-flight .item label > input[type="checkbox"]:checked ~ .awe-icon-check,
+.booking-info .add-room-type>a:hover,
+.services-on-flight .item label>input[type="radio"]:checked~.awe-icon-check,
+.services-on-flight .item label>input[type="checkbox"]:checked~.awe-icon-check,
 .initiative-table tbody tr .item-body .item-from h3,
 .initiative-table tbody tr .item-body .item-to h3,
 .initiative-table tbody tr .item-thumb .text h3,
@@ -206,23 +208,23 @@ mark, .mark,
 .woocommerce-message a:hover,
 .checkout-page__sidebar ul li:hover a,
 .checkout-page__sidebar ul li:hover:before,
-.widget_has_radio_checkbox_text .widget_content label > input[type="radio"]:checked ~ .awe-icon-check,
-.widget_has_radio_checkbox_text .widget_content label > input[type="checkbox"]:checked ~ .awe-icon-check,
-.widget_has_radio_checkbox ul li label > input[type="radio"]:checked ~ .awe-icon-check,
-.widget_has_radio_checkbox ul li label > input[type="checkbox"]:checked ~ .awe-icon-check,
-.page-sidebar .widget_recent_comments ul li:hover > a,
-.page-sidebar .widget_latest_post ul li:hover > a,
-.page-sidebar .widget_rss ul li:hover > a,
-.page-sidebar .widget_meta ul li:hover > a,
-.page-sidebar .widget_pages ul li:hover > a,
-.page-sidebar .widget_nav_menu ul li:hover > a,
-.page-sidebar .widget_categories ul li:hover > a,
-.page-sidebar .widget_archive ul li:hover > a,
+.widget_has_radio_checkbox_text .widget_content label>input[type="radio"]:checked~.awe-icon-check,
+.widget_has_radio_checkbox_text .widget_content label>input[type="checkbox"]:checked~.awe-icon-check,
+.widget_has_radio_checkbox ul li label>input[type="radio"]:checked~.awe-icon-check,
+.widget_has_radio_checkbox ul li label>input[type="checkbox"]:checked~.awe-icon-check,
+.page-sidebar .widget_recent_comments ul li:hover>a,
+.page-sidebar .widget_latest_post ul li:hover>a,
+.page-sidebar .widget_rss ul li:hover>a,
+.page-sidebar .widget_meta ul li:hover>a,
+.page-sidebar .widget_pages ul li:hover>a,
+.page-sidebar .widget_nav_menu ul li:hover>a,
+.page-sidebar .widget_categories ul li:hover>a,
+.page-sidebar .widget_archive ul li:hover>a,
 .page-sidebar .widget_has_thumbnail .content a:hover,
 .page-sidebar .widget h3,
 .page-sidebar .sidebar-title .clear-filter a:hover,
 .page-sidebar .sidebar-title h2,
-.flight-popup-tabs .flight-popup__map-content .flight-popup__map-content-list .map-item.map-active .item-title h2, 
+.flight-popup-tabs .flight-popup__map-content .flight-popup__map-content-list .map-item.map-active .item-title h2,
 .flight-popup-tabs .flight-popup__map-content .flight-popup__map-content-list .map-item:hover .item-title h2,
 .flight-item:hover .item-price-more .price .amount,
 .trip-item:hover .item-price-more .price .amount,
@@ -277,7 +279,7 @@ mark, .mark,
 #footer-page .widget_recent_entries ul li a:hover,
 #footer-page .widget_archive ul li a:hover,
 #footer-page .widget h3,
-.category-heading-content > h2,
+.category-heading-content>h2,
 .breadcrumb ul li span,
 .breadcrumb ul li a:hover,
 .trip-flight-hotel__table tbody tr:hover .item-price a,
@@ -291,31 +293,34 @@ mark, .mark,
 .awe-services h2,
 .awe-search-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
 .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
-.search-box .searchtoggle.searchtoggle-active, .search-box .searchtoggle:hover,
+.search-box .searchtoggle.searchtoggle-active,
+.search-box .searchtoggle:hover,
 .awe-navigation-responsive .menu-list .submenu-toggle:hover .fa,
-.awe-navigation-responsive .menu-list li.current-menu-parent > a,
-.awe-navigation-responsive .menu-list li.current-menu-item > a,
+.awe-navigation-responsive .menu-list li.current-menu-parent>a,
+.awe-navigation-responsive .menu-list li.current-menu-item>a,
 .awe-navigation-responsive .menu-list li a:hover,
-.awe-navigation .menu-list li:hover > a,
-.awe-navigation .menu-list li.current-menu-parent > a,
-.awe-navigation .menu-list li.current-menu-item > a,
+.awe-navigation .menu-list li:hover>a,
+.awe-navigation .menu-list li.current-menu-parent>a,
+.awe-navigation .menu-list li.current-menu-item>a,
 .accordion .ui-state-active,
 .accordion .ui-widget-content .ui-state-active,
-.owl-carousel .owl-controls .owl-buttons > div:hover .fa,
+.owl-carousel .owl-controls .owl-buttons>div:hover .fa,
 a {
-  color: #0091EA;
+    color: #3eb842;
 }
 
 
 .flight-popup-tabs .flight-popup__map-content .flight-popup__map-content-list .map-item:hover,
 .flight-popup-tabs .flight-popup__map-content .flight-popup__map-content-list .map-item.map-active,
-.body-dark .awe-btn:focus, .body-dark .awe-btn:hover,
+.body-dark .awe-btn:focus,
+.body-dark .awe-btn:hover,
 #page-wrap.dark .booking-info,
 #page-wrap.dark .page-top .list-link li.current a:before,
 #page-wrap.dark .travelling-tabs__time .month .item.hover-active a:before,
-#page-wrap.dark .awe-btn:focus, #page-wrap.dark .awe-btn:hover,
+#page-wrap.dark .awe-btn:focus,
+#page-wrap.dark .awe-btn:hover,
 #page-wrap.dark .travelling-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
-.checkout-page__content #payment > .payment_methods li label:before,
+.checkout-page__content #payment>.payment_methods li label:before,
 .checkout-page__sidebar ul li:hover:before,
 .flight-popup-tabs .flight-popup__map-content .flight-popup__map-content-list .map-item.map-active,
 .flight-popup-tabs .flight-popup__map-content .flight-popup__map-content-list .map-item:hover,
@@ -327,40 +332,44 @@ a {
 .travelling-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
 .awe-services__list li:hover .awe-icon-check,
 .awe-btn {
-  border-color: #0091EA;
+    border-color: #3eb842;
 }
 
-#footer-page .widget_contact_info:before, #footer-page .widget_contact_info:after,
+#footer-page .widget_contact_info:before,
+#footer-page .widget_contact_info:after,
 .tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
-  border-bottom-color: #0091EA;
+    border-bottom-color: #3eb842;
 }
+
 .woocommerce-error,
 .woocommerce-info,
 .woocommerce-message,
-#footer-page .widget_contact_info:before, #footer-page .widget_contact_info:after {
-  border-left-color: #0091EA;
+#footer-page .widget_contact_info:before,
+#footer-page .widget_contact_info:after {
+    border-left-color: #3eb842;
 }
 
 #page-wrap.dark .accordion .ui-state-active .ui-icon,
 #page-wrap.dark .accordion .ui-widget-content .ui-state-active .ui-icon,
 .page-sidebar .sidebar-title {
-  border-top-color: #0091EA;
+    border-top-color: #3eb842;
 }
 
 #page-wrap.dark .sale-flights-tabs__table tr:hover,
 .sale-flights-tabs__table tr:hover,
 .body-dark .sale-flight-popup .sale-flights-tabs__table tr:hover,
 .sale-flight-popup .sale-flights-tabs__table tr:hover {
-    -webkit-box-shadow: inset 0 0 0 2px #0091EA;
-    -moz-box-shadow: inset 0 0 0 2px #0091EA;
-    box-shadow: inset 0 0 0 2px #0091EA;
+    -webkit-box-shadow: inset 0 0 0 2px #3eb842;
+    -moz-box-shadow: inset 0 0 0 2px #3eb842;
+    box-shadow: inset 0 0 0 2px #3eb842;
 }
+
 .flight-item:hover,
 .trip-item:hover,
 .attraction-item:hover,
 .hotel-item:hover,
 .destination-list__content .destinations-item:hover {
-  -webkit-box-shadow: 0 0 0 2px #0091EA;
-  -moz-box-shadow: 0 0 0 2px #0091EA;
-  box-shadow: 0 0 0 2px #0091EA;
+    -webkit-box-shadow: 0 0 0 2px #3eb842;
+    -moz-box-shadow: 0 0 0 2px #3eb842;
+    box-shadow: 0 0 0 2px #3eb842;
 }

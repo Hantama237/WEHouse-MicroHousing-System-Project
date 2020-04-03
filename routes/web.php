@@ -27,22 +27,14 @@ Route::get('/login',"Auth\loginController@index");
 Route::get("/logout","Auth\logoutController@index");
 
 //============== Housing Officer ========//
-
-
 Route::get('/residences/setup',"Pages\setUpResidenceController@index");
-Route::get('/applications', function () {
-    return view('viewApplication');
-});
+Route::post('/residences/submit',"Pages\setUpResidenceController@addResidence");
+Route::get('/applications',"Pages\getApplicationController@index" );
 
 //============== Applicant ===============//
-
-Route::get('/residences', function () {
-    return view('viewResidence');
-});
-Route::get('/history', function () {
-    return view('history');
-});
-
+Route::get('/residences', "Pages\getResidenceController@index");
+Route::post('/residences/apply', "Pages\getResidenceController@addApplication");
+Route::get('/applications/history',"Pages\getHistoryController@index");
 
 // ============== Admin ==================//
 
