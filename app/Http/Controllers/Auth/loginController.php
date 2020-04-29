@@ -18,6 +18,9 @@ class loginController extends Controller{
     }
     function login(Request $req){
         //bcrypt(str);
+        if(checkerFunction::checkLogin($req)){
+            return redirect("/");
+        }
         if($req->has("login")){
             $user = DB::table("users")->where("email",$req->input('email'))->first();
             if(is_null($user)){

@@ -28,7 +28,6 @@
                 <div class="col-lg-9">
                     
                     @foreach ($residences as $i)
-                   
                         <!-- ITEM -->
                         <div class="flight-item">
 

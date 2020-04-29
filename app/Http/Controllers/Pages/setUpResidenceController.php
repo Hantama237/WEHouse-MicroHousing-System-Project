@@ -11,17 +11,16 @@ use App\Functions\databaseFunction;
 class setUpResidenceController extends Controller{
     
     function index(Request $req){
-        if(checkerFunction::checkLogin($req)){
-            if(checkerFunction::checkHousingOfficer($req)){
-                $residences=databaseFunction::getMyResidences($req);
-                $residenceIds=databaseFunction::getResidenceIds($residences);
-                $applications=databaseFunction::getApplicationToMyResidence($residenceIds);
-                return view("pages.setUpResidence",["residences"=>$residences,"applications"=>$applications]);
-            }else 
-                return redirect("/");
-        }else{
+        if(!checkerFunction::checkLogin($req)){
             return redirect("/login");
         }
+        if(!checkerFunction::checkHousingOfficer($req)){
+            return redirect("/");
+        }
+        $residences=databaseFunction::getMyResidences($req);
+        $residenceIds=databaseFunction::getResidenceIds($residences);
+        $applications=databaseFunction::getApplicationToMyResidence($residenceIds);
+        return view("pages.setUpResidence",["residences"=>$residences,"applications"=>$applications]);
     }
     function addResidence(Request $req){
         $data=$req->validate([
