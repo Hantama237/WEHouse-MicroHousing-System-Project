@@ -21,5 +21,11 @@ class getHistoryController extends Controller{
         $residences=databaseFunction::getResidenceToMyApplication($residenceIds);
         return view("pages.applicant.applicationHistory",["applications"=>$application,"residences"=>$residences]);
     }
+    //cancel method
+    public function delete($id)
+    {
+        DB::table('application')->where('id',$id)->delete();
+        return redirect('/applications/history');
+    }
 }
 ?>
