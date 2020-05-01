@@ -35,6 +35,7 @@ Route::get('/applications',"Pages\getApplicationController@index" );
 Route::get('/residences', "Pages\getResidenceController@index");
 Route::post('/residences/apply', "Pages\getResidenceController@addApplication");
 Route::get('/applications/history',"Pages\getHistoryController@index");
+Route::get('/applications/history/cancel/{id}',"Pages\getHistoryController@delete");
 
 // ============== Admin ==================//
 
