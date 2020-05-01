@@ -24,7 +24,7 @@ class getHistoryController extends Controller{
     //cancel method
     public function delete($id)
     {
-        DB::table('application')->where('id',$id)->delete();
+        DB::table('application')->where('application_id',$id)->delete();
         return redirect('/applications/history');
     }
 }
