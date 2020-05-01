@@ -65,7 +65,7 @@
                                     <div class="price">
                                         <span class="amount">${{$residences[$i->residence_id]->monthly_rental}}/m</span>
                                     </div>
-                                        <a href="#" class="awe-btn">Cancel</a>
+                                <a href="/applicant/history/cancel/{{$i->id}}" class="awe-btn">Cancel</a>
                                 </div>
                             </div>
                             <!-- END / ITEM -->
