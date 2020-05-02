@@ -30,14 +30,21 @@ Route::get("/logout","Auth\logoutController@index");
 Route::get('/residences/setup',"Pages\setUpResidenceController@index");
 Route::post('/residences/submit',"Pages\setUpResidenceController@addResidence");
 Route::get('/applications',"Pages\getApplicationController@index" );
+Route::post('/application/allocate',"Pages\getApplicationController@allocate");
+Route::post('/application/reject',"Pages\getApplicationController@reject");
 
 //============== Applicant ===============//
 Route::get('/residences', "Pages\getResidenceController@index");
 Route::post('/residences/apply', "Pages\getResidenceController@addApplication");
 Route::get('/applications/history',"Pages\getHistoryController@index");
+Route::post('/application/cancel',"Pages\getHistoryController@cancel");
 
 // ============== Admin ==================//
-
+Route::get("/admin/login","Pages\adminController@index");
+Route::post("/admin/login","Pages\adminController@login");
+Route::get("/admin","Pages\adminController@dashboard");
+Route::get("/admin/register/housing-officer","Pages\adminController@registerHo");
+Route::get("/admin/register/housing-officer/submit","Pages\adminController@registerHoSubmit");
 
 
 

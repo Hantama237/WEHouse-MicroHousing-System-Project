@@ -3,7 +3,14 @@ namespace App\Functions;
 use DB;
 class databaseFunction{
     public static function storeResidence($data){
-        DB::table("residences")->insert($data);
+        $idResidence = DB::table("residences")->insertGetId($data);
+        for($i=0;$i<$data["num_of_unit"];$i++){
+            DB::table("unit")->insert([
+                "unit_no"=>$i+1,
+                "avaibility"=>true,
+                "residence_id"=>$idResidence
+            ]);
+        }
     }
     public static function getMyResidences($req){
         return DB::table('residences')->where("officer_id",$req->session()->get("id"))->paginate(10);
@@ -14,6 +21,14 @@ class databaseFunction{
             array_push($residenceIds,$res->id);
         }
         return $residenceIds;
+    }
+    public static function getUnits($resIds){
+        $units = [];
+        foreach($resIds as $id){
+            $result = DB::table('unit')->where("residence_id",$id)->get();
+            $units[$id]=$result;
+        }
+        return $units;
     }
     public static function getApplicationToMyResidence($resIds){
         $applications =[];

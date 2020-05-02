@@ -21,5 +21,20 @@ class getHistoryController extends Controller{
         $residences=databaseFunction::getResidenceToMyApplication($residenceIds);
         return view("pages.applicant.applicationHistory",["applications"=>$application,"residences"=>$residences]);
     }
+    function cancel(Request $req){
+        if(!checkerFunction::checkLogin($req)){
+            return redirect("/login");
+        }
+        if(checkerFunction::checkHousingOfficer($req)){
+            return redirect("/");
+        }
+        $data = $req->validate([
+            "id"=>"required"
+        ]);
+        DB::table("application")->where("id",$data["id"])->delete();
+        return response()->json([
+            "success"=>true
+        ], 200);
+    }
 }
 ?>

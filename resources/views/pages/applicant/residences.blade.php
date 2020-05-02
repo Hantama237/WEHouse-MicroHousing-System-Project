@@ -26,7 +26,9 @@
                     <button class="awe-btn" style="width: 80%; margin-top: 10px;">Add Residences</button>
                 </div>
                 <div class="col-lg-9">
-                    
+                    @if(count($residences)<1)
+                    <h4>No Residences available</h4>
+                    @endif
                     @foreach ($residences as $i)
                    
                         <!-- ITEM -->
@@ -42,15 +44,19 @@
                                 <div class="col-lg-6 right">
                                     <div class="row">
                                         <div class="col-xs-12">Earliest date available</div>
-                                        <div class="col-xs-12 bottom">Today</div>
+                                        <div class="col-xs-12 bottom">@if($i->unit_available>0)Today @else Unknown date @endif</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="item-price-more">
+                                @if($i->unit_available>0)
                                 <div class="price">
                                     <span class="amount">${{$i->monthly_rental}}/m</span>
                                 </div>
                                 <button onclick="updateModal('{!!$i->id!!}','{{$i->name}}')" type="button" class="awe-btn" data-toggle="modal" data-target="#exampleModal">Apply</button>
+                                @else
+                                <span style="font-size:large;">Unavailable</span>
+                                @endif
                             </div>
                         </div>
                         <!-- END / ITEM -->
@@ -97,7 +103,7 @@
         <form action="/residences/apply" method="POST">
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-xs-12"><input type="text" name="application_date" class="awe-calendar" value="{{old("application_date")}}" placeholder="Application date"></div>
+                    {{-- <div class="col-xs-12"><input type="text" disabled name="application_date" class="awe-calendar" value="Today" placeholder="Today"></div> --}}
                     <div class="col-xs-6"><input type="number" name="required_year" id="required_year" value="{{old("required_year")}}" placeholder="Required year"></div>
                     <div class="col-xs-6"><input type="number" name="required_month" id="required_month" value="{{old("required_month")}}" placeholder="Required month"></div>
                     <div class="col-xs-12"><label for="residence_name">Residence</label></div>

@@ -62,14 +62,26 @@
                                     </div>
                                 </div>
                                 <div class="item-price-more">
+                                    @if($i->status==0)
                                     <div class="price">
                                         <span class="amount">${{$residences[$i->residence_id]->monthly_rental}}/m</span>
                                     </div>
-                                        <a href="#" class="awe-btn">Cancel</a>
+                                    <button onclick="updateId('{{$i->id}}')" data-toggle="modal" data-target="#exampleModal" class="awe-btn">Cancel</button>
+                                    @elseif($i->status==-1)
+                                    <span style="color:red; font-size:large;">Rejected</span>
+                                    @else
+                                    <div class="price">
+                                        <span class="amount">${{$residences[$i->residence_id]->monthly_rental}}/m</span>
+                                    </div>
+                                    <button onclick="" data-toggle="modal" data-target="#detailModal" class="awe-btn">Detail</button>
+                                    @endif
                                 </div>
                             </div>
                             <!-- END / ITEM -->
                         @endforeach
+                        @if (count($applications)<1)
+                            <h3>No Application submited</h3>
+                        @endif
                     @endisset
                     {{-- <!-- PAGINATION -->
                     <div class="page__pagination">
@@ -104,5 +116,49 @@
     </div>
 </section>
 
+<div style="z-index:999999" class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                The application will removed permanently
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="awe-btn" data-dismiss="modal">No</button>
+                <button type="button" onclick="cancel()" class="awe-btn awe-btn-style3">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var id = "";
+    function cancel(){
+        $.ajax({
+            url: "/application/cancel",
+            type: 'POST',
+            data: {
+                id:id,
+                _token:'{{ csrf_token() }}'
+            },
+            success:(data)=>{
+                console.log(data);
+                window.location.reload();
+            },
+            error:(data)=>{
+                console.log(data)
+            }
+        })
+    }
+    function updateId(selectedId){
+        id = selectedId;
+    }
+</script>
 
 @endsection
