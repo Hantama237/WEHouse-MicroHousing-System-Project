@@ -9,7 +9,7 @@
             color: #666;
         }
         .flight-item .item-price-more {
-            width: 25%;
+            min-width: 140px;
             
         }
         .flight-item .item-price-more .awe-btn{
