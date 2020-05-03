@@ -33,7 +33,11 @@ class databaseFunction{
     public static function getApplicationToMyResidence($resIds){
         $applications =[];
         foreach($resIds as $id){
-            $result = DB::table('application')->where("residence_id",$id)->get();
+            $result = DB::table('application')
+            ->where("residence_id",$id)
+            ->leftJoin('allocation', 'application.allocation_id', '=', 'allocation.id')
+            ->select("*")
+            ->get();
             $applications[$id]=$result;
         }
         return $applications;
@@ -51,7 +55,11 @@ class databaseFunction{
     }
 
     public static function getMyApplication($req){
-        return DB::table('application')->where("applicant_id",$req->session()->get("id"))->paginate(10);
+        return DB::table('application')
+            ->where("applicant_id",$req->session()->get("id"))
+            ->leftJoin('allocation', 'application.allocation_id', '=', 'allocation.id')
+            ->select("*")
+            ->paginate(10);
     }
     public static function getResidenceIdsFromApplication($applications){
         $residenceIds=[];

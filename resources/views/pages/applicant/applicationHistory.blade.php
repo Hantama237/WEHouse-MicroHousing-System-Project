@@ -73,7 +73,7 @@
                                     <div class="price">
                                         <span class="amount">${{$residences[$i->residence_id]->monthly_rental}}/m</span>
                                     </div>
-                                    <button onclick="" data-toggle="modal" data-target="#detailModal" class="awe-btn">Detail</button>
+                                    <button onclick="updateDetail({{json_encode($i)}})" data-toggle="modal" data-target="#detailModal" class="awe-btn">Detail</button>
                                     @endif
                                 </div>
                             </div>
@@ -137,6 +137,30 @@
     </div>
 </div>
 
+<div style="z-index:999999" class="modal fade" id="detailModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Allocation Detail</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="color:black;">
+                Allocation from <span id="date_from"></span><br>
+                Allocation until <span id="date_end"></span><br>
+                Total duration <span id="duration_total"></span><br><br>
+
+                <span style="color:red;">*</span> Please visit the residence after Allocation before 2 days after allocated to confirm, otherwise the allocation will be canceled by the officer.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="awe-btn" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     var id = "";
     function cancel(){
@@ -158,6 +182,13 @@
     }
     function updateId(selectedId){
         id = selectedId;
+    }
+    function updateDetail(data){
+        $("#date_from").text(data["date_from"])
+        $("#date_end").text(data["date_end"])
+        $("#duration_total").text(data["duration"]+" Days")
+
+        $("#duration_remaining").text("Unknown")
     }
 </script>
 

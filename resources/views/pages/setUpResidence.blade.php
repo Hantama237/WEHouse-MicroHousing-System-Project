@@ -26,7 +26,9 @@
                     <button class="awe-btn" style="width: 80%; margin-top: 10px;">Add Residences</button>
                 </div>
                 <div class="col-lg-9">
-
+                    @if(count($residences)<1)
+                    <h3>No Residences, add it first</h3>
+                    @endif
                     @foreach ($residences as $i)
                     <!-- ITEM -->
                     <div class="flight-item">

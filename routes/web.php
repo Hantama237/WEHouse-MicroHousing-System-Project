@@ -44,7 +44,7 @@ Route::get("/admin/login","Pages\adminController@index");
 Route::post("/admin/login","Pages\adminController@login");
 Route::get("/admin","Pages\adminController@dashboard");
 Route::get("/admin/register/housing-officer","Pages\adminController@registerHo");
-Route::get("/admin/register/housing-officer/submit","Pages\adminController@registerHoSubmit");
+Route::post("/admin/register/housing-officer","Pages\adminController@registerHoSubmit");
 
 
 

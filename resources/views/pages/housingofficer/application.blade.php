@@ -23,8 +23,25 @@
             width: 100%;
             margin-bottom: 3px;
         }
+        @media screen and (max-width: 600px) {
+            .flight-item .item-price-more{
+                width: 100%;
+            }
+            .flight-item .item-body {
+                width: 100% !important;
+            }
+        }
     </style>
-    
+    <script>
+         function updateDetail(data){
+            console.log("update modal")
+            $("#date_from").text(data["date_from"])
+            $("#date_end").text(data["date_end"])
+            $("#duration_total").text(data["duration"]+" Days")
+            
+            $("#duration_remaining").text("Unknown")
+        }
+    </script>
     <div class="container">
         <span class="mobile">
             @include("components.sideMenu")
@@ -46,7 +63,11 @@
                     {{-- <button class="awe-btn" style="width: 80%; margin-top: 10px;">Add Residences</button> --}}
                 </div>
                 <div class="col-lg-9">
+                    
                     @isset($applications)
+                    @if(count($applications)<1)
+                    <h3>No Application</h3>
+                    @endif
                     @foreach ($residences as $i)
                         @foreach ($applications[$i->id] as $a)
                             <!-- ITEM -->
@@ -66,7 +87,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item-price-more">
+                                <div class="item-price-more" onclick="updateDetail({{json_encode($a)}})">
                                     @if($a->status==0)
                                     <div class="price">
                                         <button onclick="updateAllocationModal('{{$a->id}}',{!!$a->required_month!!},{!!$a->required_year!!},'{{$i->name}}',{{json_encode($units[$i->id])}})" data-toggle="modal" data-target="#allocateModal" class="awe-btn awe-btn-style3">Allocate</button>
@@ -76,7 +97,7 @@
                                     <span style="color:red; font-size:large;">Rejected</span>
                                     @else
                                     <div class="price">
-                                        <button data-toggle="modal" data-target="#allocateModal" class="awe-btn">Detail</button>
+                                    <button onclick="()=>{updateDetail({{json_encode($a)}})}" data-toggle="modal" data-target="#detailModal" class="awe-btn">Detail</button>
                                     </div>
                                     @endif
                                 </div>
@@ -138,6 +159,31 @@
         </div>
     </div>
 </div>
+
+<div style="z-index:999999" class="modal fade" id="detailModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Allocation Detail</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="color:black;">
+                Allocation from <span id="date_from"></span><br>
+                Allocation until <span id="date_end"></span><br>
+                Total duration <span id="duration_total"></span><br><br>
+
+                <span style="color:red;">*</span> Remember to cancel when the applicant not visit the Residence after allocation.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="awe-btn" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div style="z-index:999999" class="modal fade" id="allocateModal" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -206,14 +252,15 @@
         let from = moment($("#date_from").val());
         let end = moment($("#date_end").val());
 
-        let duration = moment.duration(end.diff(from))
-        let day = duration/1000/60/60/24;
+        let dur = moment.duration(end.diff(from))
+        let day = dur/1000/60/60/24;
         duration = day;
-        let month =  Math.ceil(((duration/1000/60/60/24)%365)/30);
-        let years = Math.ceil(duration/1000/60/60/24/365);
-        let str = ""+(years>=0?years+" Yr ":"")+""+(month>=0?month+" Mo":"");
+        let month =  Math.ceil(((dur/1000/60/60/24)%365)/30);
+        let years = Math.ceil(dur/1000/60/60/24/365);
+        let str = ""+requestedYear+" Yr "+requestedMonth+" Mo";
         $("#selected_duration").text(str);
     }
+   
     function reject(){
         $.ajax({
             url: "/application/reject",
@@ -277,7 +324,7 @@
         $("#unit_id").append("<option value=''>Select Unit</option")
         unit.forEach(i => {
             if(i["avaibility"]==true)
-            $("#unit_id").append("<option value='"+i['unit_no']+"'>Unit "+i['unit_no']+"</option");
+            $("#unit_id").append("<option value='"+i['unit_id']+"'>Unit "+i['unit_no']+"</option");
         });
         
     }
